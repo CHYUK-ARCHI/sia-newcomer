@@ -80,28 +80,34 @@ const Library: React.FC = () => {
         </div>
       </div>
 
-      <div className="library-grid">
+      <div className="library-list-container">
+        <div className="library-list-header">
+          <div className="col-info">파일 정보 (File Info)</div>
+          <div className="col-meta">업데이트 (Updated)</div>
+          <div className="col-actions"></div>
+        </div>
+
         {filteredItems.length > 0 ? (
           filteredItems.map(item => (
-            <div key={item.id} className="library-card">
-              <div className="lib-content">
-                <div className="lib-header">
-                  <h3>{item.title}</h3>
-                  <span className="version-badge">{item.version}</span>
-                </div>
-                <p className="lib-desc">{item.description}</p>
-                <div className="lib-meta">
-                  <span className="date">Updates: {item.updatedDate}</span>
-                  <div className="tags">
-                    {item.tags.map(tag => <span key={tag} className="tag">#{tag}</span>)}
+            <div key={item.id} className="library-list-item">
+              <div className="col-info">
+                <div className="item-head">
+                  <span className="item-title">{item.title}</span>
+                  <span className="item-version">{item.version}</span>
+                  <div className="item-tags">
+                    {item.tags.map(tag => <span key={tag} className="item-tag">#{tag}</span>)}
                   </div>
                 </div>
+                <p className="item-desc">{item.description}</p>
               </div>
-              <div className="lib-actions">
-                <button className="btn-download" onClick={() => copyToClipboard(item.serverPath)}>
+              <div className="col-meta">
+                <span className="item-date">{item.updatedDate}</span>
+              </div>
+              <div className="col-actions">
+                <button className="btn-action" onClick={() => copyToClipboard(item.serverPath)}>
                   경로 복사
                 </button>
-                <a href="#" className="btn-link" onClick={(e) => { e.preventDefault(); alert("인트라넷/파일서버 직접 접근이 구성되면 다운로드가 시작됩니다."); }}>
+                <a href="#" className="btn-action primary" onClick={(e) => { e.preventDefault(); alert("인트라넷/파일서버 직접 접근이 구성되면 다운로드가 시작됩니다."); }}>
                   다운로드
                 </a>
               </div>
