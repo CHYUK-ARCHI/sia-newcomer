@@ -127,5 +127,4 @@ dist
 # Project specific
 dist-ssr
 *.local
-release
-build_deploy
+
