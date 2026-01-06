@@ -8,7 +8,7 @@ const MainLayout: React.FC = () => {
     localStorage.removeItem("auth_token");
     localStorage.removeItem("user_role");
     // Redirect to login
-    window.location.href = "/login";
+    window.location.href = "/";
   };
 
   return (
@@ -19,7 +19,7 @@ const MainLayout: React.FC = () => {
           <span className="subtitle">New Comer On-Boarding System</span>
         </div>
         <nav className="nav-menu">
-          <Link to="/" className="nav-item">
+          <Link to="/dashboard" className="nav-item">
             Dashboard
           </Link>
           <div className="nav-header">LEARNING</div>

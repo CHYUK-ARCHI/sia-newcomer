@@ -35,12 +35,12 @@ const Login: React.FC = () => {
       if (foundUser) {
         localStorage.setItem('auth_token', 'token_' + foundUser.id);
         localStorage.setItem('user_role', foundUser.role.toUpperCase() === 'ADMIN' ? 'ADMIN' : 'NEW_HIRE');
-        navigate('/');
+        navigate('/dashboard');
       } else if (employeeId === 'admin' && password === 'admin') {
         // Fallback for initial admin access if storage is wiped/empty
         localStorage.setItem('auth_token', 'mock_token_admin');
         localStorage.setItem('user_role', 'ADMIN');
-        navigate('/');
+        navigate('/dashboard');
       } else {
         setError('등록되지 않은 사번이거나 비밀번호가 틀렸습니다.');
       }

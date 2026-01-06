@@ -10,18 +10,18 @@ import './App.css';
 // Mock Protected Route
 const PrivateRoute = () => {
   const isAuthenticated = localStorage.getItem('auth_token');
-  return isAuthenticated ? <Outlet /> : <Navigate to="/login" replace />;
+  return isAuthenticated ? <Outlet /> : <Navigate to="/" replace />;
 };
 
 function App() {
   return (
     <HashRouter>
       <Routes>
-        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Login />} />
         
         {/* Protected Routes */}
         <Route element={<PrivateRoute />}>
-          <Route path="/" element={<MainLayout />}>
+          <Route path="/dashboard" element={<MainLayout />}>
             <Route index element={<Dashboard />} />
             <Route path="tasks" element={<div>My Tasks (Coming Soon)</div>} />
             <Route path="curriculum" element={<Curriculum />} />
