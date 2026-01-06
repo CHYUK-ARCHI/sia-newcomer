@@ -53,7 +53,7 @@ const Login: React.FC = () => {
       <div className="login-card">
         <div className="login-header">
           <img src={logo} alt="SIAPLAN Logo" className="login-logo" style={{ maxWidth: '180px', marginBottom: '1rem' }} />
-          <p className="subtitle">New Comer On-Boarding System</p>
+          <p className="subtitle">New Comer On-Boarding System (v1.1)</p>
         </div>
         
         <form onSubmit={handleLogin} className="login-form">
