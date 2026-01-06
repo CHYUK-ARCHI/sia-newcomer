@@ -1,14 +1,16 @@
 import React from "react";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, useNavigate } from "react-router-dom";
 import "./MainLayout.css";
 
 const MainLayout: React.FC = () => {
+  const navigate = useNavigate();
+
   const handleLogout = () => {
     // Clear mock auth data
     localStorage.removeItem("auth_token");
     localStorage.removeItem("user_role");
     // Redirect to login
-    window.location.href = "/";
+    navigate("/");
   };
 
   return (
