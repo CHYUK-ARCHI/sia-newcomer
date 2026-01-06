@@ -1,10 +1,11 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import logo from '../assets/logo2.png';
 import './Login.css';
 
 const Login: React.FC = () => {
-  // navigate removed as we use window.location.href for hard reload
-  // ... (state lines 7-10 kept same but showing minimal context here)
+  const navigate = useNavigate();
+  // ... (state lines kept same)
   const [employeeId, setEmployeeId] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -34,12 +35,12 @@ const Login: React.FC = () => {
       if (foundUser) {
         localStorage.setItem('auth_token', 'token_' + foundUser.id);
         localStorage.setItem('user_role', foundUser.role.toUpperCase() === 'ADMIN' ? 'ADMIN' : 'NEW_HIRE');
-        window.location.href = '/';
+        navigate('/');
       } else if (employeeId === 'admin' && password === 'admin') {
         // Fallback for initial admin access if storage is wiped/empty
         localStorage.setItem('auth_token', 'mock_token_admin');
         localStorage.setItem('user_role', 'ADMIN');
-        window.location.href = '/';
+        navigate('/');
       } else {
         setError('등록되지 않은 사번이거나 비밀번호가 틀렸습니다.');
       }
