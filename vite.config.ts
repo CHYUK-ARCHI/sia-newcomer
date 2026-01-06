@@ -7,6 +7,6 @@ export default defineConfig({
   plugins: [react()],
   base: '/sia-newcomer/',
   build: {
-    outDir: 'release',
+    outDir: 'build_deploy',
   },
 })
