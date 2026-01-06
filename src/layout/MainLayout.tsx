@@ -25,24 +25,24 @@ const MainLayout: React.FC = () => {
             Dashboard
           </Link>
           <div className="nav-header">LEARNING</div>
-          <Link to="/curriculum" className="nav-item">
+          <Link to="/dashboard/curriculum" className="nav-item">
             Curriculum
           </Link>
           <div className="nav-header">RESOURCES</div>
-          <Link to="/drawings" className="nav-item">
+          <Link to="/dashboard/drawings" className="nav-item">
             Standard Drawings
           </Link>
-          <Link to="/lisp" className="nav-item">
+          <Link to="/dashboard/lisp" className="nav-item">
             LISP Library
           </Link>
-          <Link to="/manuals" className="nav-item">
+          <Link to="/dashboard/manuals" className="nav-item">
             Manuals & Setup
           </Link>
 
           {localStorage.getItem("user_role") === "ADMIN" && (
             <>
               <div className="nav-header">ADMIN</div>
-              <Link to="/admin" className="nav-item">
+              <Link to="/dashboard/admin" className="nav-item">
                 Admin Console
               </Link>
             </>

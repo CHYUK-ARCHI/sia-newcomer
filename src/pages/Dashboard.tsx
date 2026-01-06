@@ -54,7 +54,7 @@ const Dashboard: React.FC = () => {
             <section className="card task-card">
               <div className="card-header">
                 <h3>오늘의 할 일</h3>
-                <Link to="/tasks" className="more-link">전체 보기 &gt;</Link>
+                <Link to="/dashboard/tasks" className="more-link">전체 보기 &gt;</Link>
               </div>
               <div className="task-list">
                 {todaysTasks.map(task => (
@@ -94,13 +94,13 @@ const Dashboard: React.FC = () => {
             <section className="card quick-links-card">
               <h3>바로가기</h3>
               <div className="quick-links-grid">
-                <Link to="/manuals" className="quick-link-item">
+                <Link to="/dashboard/manuals" className="quick-link-item">
                   <span>매뉴얼</span>
                 </Link>
-                <Link to="/lisp" className="quick-link-item">
+                <Link to="/dashboard/lisp" className="quick-link-item">
                   <span>LISP 자료실</span>
                 </Link>
-                <Link to="/drawings" className="quick-link-item">
+                <Link to="/dashboard/drawings" className="quick-link-item">
                   <span>표준 도면</span>
                 </Link>
                 <a href="#" className="quick-link-item">
