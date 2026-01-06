@@ -1,0 +1,136 @@
+.library-page {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.library-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+  .library-controls {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  background-color: #e9ecef;
+  padding: 4px;
+  border-radius: 8px;
+}
+
+.tab-btn {
+  border: none;
+  background: none;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  border-radius: var(--border-radius);
+  transition: all 0.2s;
+}
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  background-color: #e9ecef;
+  padding: 4px;
+  border-radius: var(--border-radius);
+}
+
+.search-bar-wrapper {
+  position: relative;
+  flex: 1; /* Fluid width */
+  min-width: 200px;
+}
+
+/* Responsive Library Layout */
+.library-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Default list view */
+  gap: 16px;
+}
+
+@media (min-width: 1600px) {
+  .library-grid {
+    grid-template-columns: 1fr 1fr; /* Two columns on very wide screens */
+  }
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.library-card {
+  display: flex;
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: 20px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  align-items: center;
+}
+
+.lib-icon {
+  font-size: 2rem;
+  margin-right: 20px;
+  padding: 12px;
+  background-color: #f8f9fa;
+  border-radius: var(--border-radius);
+}
+
+.version-badge {
+  background-color: #e3f2fd;
+  color: var(--color-primary);
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  border-radius: var(--border-radius);
+}
+
+.tag {
+  background-color: #f1f3f5;
+  padding: 2px 6px;
+  border-radius: var(--border-radius);
+}
+
+.btn-download, .btn-link {
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  border-radius: var(--border-radius);
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.no-results {
+  text-align: center;
+  padding: 40px;
+  color: var(--color-text-muted);
+  background-color: #f8f9fa;
+  border-radius: var(--border-radius);
+}
+
+.server-notice {
+  margin-top: 24px;
+  padding: 12px;
+  background-color: #fff3cd;
+  border: 1px solid #ffeeba;
+  color: #856404;
+  border-radius: var(--border-radius);
+  font-size: 0.9rem;
+  text-align: center;
+}

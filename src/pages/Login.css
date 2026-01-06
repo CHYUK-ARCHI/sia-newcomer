@@ -1,0 +1,171 @@
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-bg-body);
+}
+
+.login-card {
+  background: white;
+  width: 100%;
+  max-width: 400px;
+  padding: 40px;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); Removed for flat look */
+  text-align: center; /* Center everything as requested */
+}
+
+.login-header {
+  margin-bottom: 32px;
+}
+
+.login-header h1 {
+  font-size: 1.8rem;
+  letter-spacing: -0.5px;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.login-header .subtitle {
+  color: var(--color-text-muted);
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left; /* Keep labels left for readability or center? User said center everything. Let's try center or keep input centered. */
+  text-align: center; 
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #444;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px; /* Taller inputs */
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  transition: border-color 0.2s;
+  outline: none;
+  background-color: #f8f9fa;
+  text-align: center; /* Input text centered */
+}
+
+.form-group input:focus {
+  border-color: var(--color-primary);
+  background-color: #fff;
+}
+
+.error-message {
+  color: var(--color-danger);
+  font-size: 0.85rem;
+  text-align: center;
+  background-color: #fff0f0;
+  padding: 10px;
+  margin-bottom: 16px;
+  border-radius: var(--border-radius);
+}
+
+.btn-primary {
+  width: 100%;
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 8px;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.btn-primary:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.login-footer {
+  margin-top: 32px;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.login-footer a {
+  color: var(--color-text-main);
+  text-decoration: underline;
+}
+
+.login-card {
+  background: white;
+  width: 100%;
+  max-width: 400px;
+  padding: 40px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  transition: border-color 0.2s;
+  outline: none;
+}
+
+.error-message {
+  color: var(--color-danger);
+  font-size: 0.85rem;
+  text-align: left;
+  background-color: #ffebee;
+  padding: 8px;
+  border-radius: var(--border-radius);
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 8px;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.btn-primary:disabled {
+  background-color: #a0c4e8;
+  cursor: not-allowed;
+}
+
+.login-footer {
+  margin-top: 24px;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.login-footer a {
+  color: var(--color-primary);
+  margin-left: 8px;
+}
+
+.login-footer a:hover {
+  text-decoration: underline;
+}

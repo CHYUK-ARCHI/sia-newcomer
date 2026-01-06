@@ -1,0 +1,68 @@
+.curriculum-page {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.page-header {
+  margin-bottom: 32px;
+}
+
+.page-header h1 {
+  font-size: 1.8rem;
+  color: var(--color-primary);
+}
+
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.section-title h2 {
+  font-size: 1.25rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.info-badge {
+  background-color: #e3f2fd;
+  color: #1565c0;
+  padding: 6px 12px;
+  border-radius: var(--border-radius);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 24px;
+  width: 24px;
+  background-color: #eee;
+  border-radius: var(--border-radius);
+  transition: all 0.2s;
+}
+
+.placeholder-box {
+  background-color: #f8f9fa;
+  padding: 24px;
+  border-radius: var(--border-radius);
+  text-align: center;
+  color: var(--color-text-muted);
+}
+
+.simple-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 12px;
+}
+
+.simple-list li {
+  margin-bottom: 8px;
+}
